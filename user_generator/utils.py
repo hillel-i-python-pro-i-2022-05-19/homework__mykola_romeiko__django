@@ -11,7 +11,8 @@ def generate_users(quantity: int) -> list:
     """
     fake = Faker('en_US')
     Faker.seed(fake.random.randint(0, 9999))
-    return [generate_user(fake) for _ in range(quantity)]
+    for _ in range(quantity):
+        yield generate_user(fake)
 
 
 def generate_user(fake: Faker) -> NamedTuple:
