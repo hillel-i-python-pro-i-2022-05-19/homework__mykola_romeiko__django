@@ -7,3 +7,8 @@
 5. use http://127.0.0.1:8000/user-generator/<int> (replace <b>int</b> with required number of generated users)
 
 It is possible to use Run django.run.xml configuration from .run directory (*only for Pycharm users*)
+
+# docker run
+```shell
+make d-run
+```
