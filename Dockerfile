@@ -21,13 +21,11 @@ RUN pip install --upgrade pip && \
 COPY --chmod=755 ./docker/app/entrypoint.sh /entrypoint.sh
 COPY --chmod=755 ./docker/app/start.sh /start.sh
 
-COPY Makefile_new Makefile
+COPY Makefile Makefile
 
 COPY ./manage.py manage.py
 COPY ./core ./core/
 COPY ./user_generator ./user_generator/
-
-#COPY --chown=${USER} . ${WORKDIR}
 
 USER ${USER}
 
