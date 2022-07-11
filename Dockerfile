@@ -25,7 +25,7 @@ COPY Makefile Makefile
 
 COPY ./manage.py manage.py
 COPY ./core ./core/
-COPY ./user_generator ./user_generator/
+COPY apps/user_generator ./user_generator/
 
 USER ${USER}
 

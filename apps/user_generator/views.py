@@ -2,7 +2,7 @@ import logging
 
 from django.http import HttpResponse
 
-from user_generator.utils import get_all_users
+from apps.user_generator.utils import get_all_users
 
 logger = logging.getLogger(__name__)
 
