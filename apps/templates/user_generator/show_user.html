@@ -1,0 +1,17 @@
+{% extends '_base.html' %}
+
+{% block body %}
+    <p>
+        {% if users %}
+            There are {{ users|length }} users generated:<br>
+            {% for user in users %}
+                <td> {{ user.name }} </td>
+                <td> {{ user.email }} </td><br>
+            {% endfor %}
+        {% else %}
+            Users were not generated.
+        {% endif %}
+    <p>
+{% endblock %}
+
+

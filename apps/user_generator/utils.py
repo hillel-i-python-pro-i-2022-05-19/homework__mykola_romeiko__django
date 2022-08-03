@@ -23,4 +23,4 @@ def generate_users(quantity: int) -> Iterator[T_PERSON]:
 
 def generate_user(fake: Faker) -> T_PERSON:
     Person = namedtuple('Person', {'name', 'email'})
-    return Person(fake.profile()['name'].split()[0], fake.profile()['mail'])
+    return Person(name=fake.profile()['name'].split()[0], email=fake.profile()['mail'])
