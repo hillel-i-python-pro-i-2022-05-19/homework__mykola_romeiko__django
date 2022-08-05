@@ -7,5 +7,5 @@
 !core
 !docker/app
 !logs
-!apps/user_generator
+!apps/
 !Makefile

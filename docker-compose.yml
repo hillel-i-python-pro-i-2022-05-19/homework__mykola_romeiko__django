@@ -6,7 +6,8 @@ services:
     build: .
     volumes:
       - "./logs:/wd/logs:rw"
+      - "./db:/wd/db:rw"
     ports:
-      - "8001:8000"
+      - "8000:8000"
     command: '/start.sh'
 

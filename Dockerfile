@@ -25,12 +25,13 @@ COPY Makefile Makefile
 
 COPY ./manage.py manage.py
 COPY ./core ./core/
-COPY apps/user_generator ./user_generator/
+COPY ./apps ./apps/
 
 USER ${USER}
 
 ENTRYPOINT ["/entrypoint.sh"]
 
 VOLUME ${WORKDIR}/logs
+VOLUME ${WORKDIR}/db
 EXPOSE 8000
 

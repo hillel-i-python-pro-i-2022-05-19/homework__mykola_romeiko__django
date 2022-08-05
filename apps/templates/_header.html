@@ -2,13 +2,16 @@
     <div class="d-flex justify-content-center">
         <ul class="nav">
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'index' %}">Home</a>
+                <a class="nav-link" href="{% url 'base:index' %}">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'user_generator:index' %}">User generator</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'humans:show_all' %}">Humans</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'contacts:show_all' %}">Contacts</a>
             </li>
         </ul>
     </div>
