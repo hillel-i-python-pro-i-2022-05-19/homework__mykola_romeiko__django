@@ -2,6 +2,7 @@
 # Make all actions needed for run homework from zero.
 d-homework-i-run:
 	@make init-configs-i-dev && \
+	make create-superuser && \
 	make d-run
 
 .PHONY: d-homework-i-purge
@@ -55,3 +56,7 @@ migrations:
 # Make some initialization steps. For example, copy configs.
 init-configs-i-dev:
 	@cp docker-compose.override.dev.yml docker-compose.override.yml
+
+.PHONY: create-superuser
+create-superuser:
+	@python ./utils/create_default_superuser.py
