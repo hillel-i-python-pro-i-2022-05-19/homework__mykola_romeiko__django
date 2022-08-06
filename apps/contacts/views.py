@@ -50,7 +50,7 @@ def edit(request: HttpRequest, pk) -> HttpResponse:
             messages.info(request, 'Contact was edited.')
             return redirect('contacts:show_all')
     else:
-        form = ContactForm()
+        form = ContactForm(instance=contact)
     return render(
         request=request,
         template_name='contacts/edit.html',
