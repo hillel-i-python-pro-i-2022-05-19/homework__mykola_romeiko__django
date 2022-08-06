@@ -41,7 +41,7 @@ def edit(request: HttpRequest, pk) -> HttpResponse:
             messages.info(request, 'Human was edited.')
             return redirect('humans:show_all')
     else:
-        form = HumanForm()
+        form = HumanForm(instance=human)
     return render(
         request=request,
         template_name='humans/edit.html',
