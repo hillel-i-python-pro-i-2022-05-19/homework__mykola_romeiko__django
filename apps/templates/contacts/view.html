@@ -3,6 +3,9 @@
 {% block body %}
     <span>
         Contact name - {{ contact.name }}<br>
-        Birthday - {{ contact.birthday }}
+        Birthday - {{ contact.birthday }}<br>
+        Phone - {{ contact.contact_details_by_foreign_key.phone }}<br>
+        Email - {{ contact.contact_details_by_foreign_key.email }}<br>
+        Tags - {{ contact.tag_many_to_many.values }}
     </span>
 {% endblock %}

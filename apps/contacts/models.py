@@ -40,7 +40,8 @@ class Contact(models.Model):
 
     tag_many_to_many = models.ManyToManyField(
         to=Tag,
-        related_name='contact_related_by_many_to_many'
+        related_name='contact_related_by_many_to_many',
+        blank=True
     )
 
     created_at = models.DateTimeField(auto_now_add=True)
